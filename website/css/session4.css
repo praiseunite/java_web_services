@@ -1,0 +1,29 @@
+/* Session 4 shares the reading, practice and learning-log components. */
+.session-four { font-size: 1rem; overflow-wrap: anywhere; }
+.session-four, .session-four .sub-block { scroll-margin-top: 130px; }
+.session-four a { color: #7dd3fc; text-underline-offset: .18em; }
+.session-four .sub-block > p { margin: .9rem 0; }
+.session-four h4 { margin: 1.6rem 0 .6rem; font-family: var(--font-heading); font-size: 1.2rem; }
+.session-four .practice-card h4 { margin-top: .6rem; }
+.session-four .quiz-feedback:empty { display: none; }
+.session-four .quiz-feedback { margin: 1rem 0; }
+.session-four .quiz-container { margin: 1.5rem 0; }
+.session-four .trace-panel button:disabled { opacity: .65; cursor: default; }
+.session-four .lesson-code code { white-space: pre; }
+body.theme-light .session-four a { color: #0369a1; }
+body.theme-light .session-four .styled-table th,
+body.theme-light .session-four .sub-title { color: #1d4ed8; }
+@media (max-width: 600px) {
+    .session-four .styled-table { min-width: 530px; }
+    .session-four .sub-title { font-size: 1.35rem; }
+    .session-four .lesson-actions button { width: 100%; }
+}
+@media print {
+    .session-four, .session-four p, .session-four li, .session-four td,
+    .session-four code, .session-four dt, .session-four dd, .session-four a { color: black; }
+    .session-four .styled-table { min-width: 0; }
+    .session-four .styled-table th { color: black; }
+    .session-four .lesson-code code { white-space: pre-wrap; }
+    .session-four details::details-content { content-visibility: visible; }
+    .session-four details > :not(summary) { display: block; }
+}

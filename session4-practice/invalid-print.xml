@@ -1,0 +1,3 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:l="urn:aptech:session4">
+    <soap:Body><l:calculatePrintCharge><pages>0</pages></l:calculatePrintCharge></soap:Body>
+</soap:Envelope>
