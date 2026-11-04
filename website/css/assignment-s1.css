@@ -1,0 +1,38 @@
+/* S1 workshop shares the reading, practice and learning-log components. */
+.assignment-one { font-size: 1rem; overflow-wrap: anywhere; }
+.assignment-one, .assignment-one .sub-block { scroll-margin-top: 130px; }
+.assignment-one a { color: #7dd3fc; text-underline-offset: .18em; }
+.assignment-one .sub-block > p { margin: .9rem 0; }
+.assignment-one h4 { margin: 1.6rem 0 .6rem; font-family: var(--font-heading); font-size: 1.2rem; }
+.assignment-one .practice-card h4 { margin-top: .6rem; }
+.assignment-one .quiz-feedback:empty { display: none; }
+.assignment-one .quiz-feedback { margin: 1rem 0; }
+.assignment-one .quiz-container { margin: 1.5rem 0; }
+.assignment-one .trace-panel button:disabled { opacity: .65; cursor: default; }
+.assignment-one .lesson-code code { white-space: pre; }
+body.theme-light .assignment-one a { color: #0369a1; }
+body.theme-light .assignment-one .styled-table th,
+body.theme-light .assignment-one .sub-title { color: #1d4ed8; }
+@media (max-width: 600px) {
+    .assignment-one .styled-table { min-width: 530px; }
+    .assignment-one .sub-title { font-size: 1.35rem; }
+    .assignment-one .lesson-actions button { width: 100%; }
+}
+@media print {
+    .assignment-one, .assignment-one p, .assignment-one li, .assignment-one td,
+    .assignment-one code, .assignment-one dt, .assignment-one dd, .assignment-one a { color: black; }
+    .assignment-one .styled-table { min-width: 0; }
+    .assignment-one .styled-table th { color: black; }
+    .assignment-one .lesson-code code { white-space: pre-wrap; }
+    .assignment-one details::details-content { content-visibility: visible; }
+    .assignment-one details > :not(summary) { display: block; }
+}
+
+#ws1ChecklistSummary ul { list-style: none; padding: 0; }
+#ws1ChecklistSummary li { display: flex; gap: .6rem; margin: .7rem 0; }
+#ws1Progress { font-weight: 700; }
+
+.workshop-portal { text-decoration: none; }
+.workshop-download { display: inline-block; margin: .5rem 1rem .5rem 0; text-decoration: none; }
+.assignment-one h1 { font-family: var(--font-heading); font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.25; margin: 1rem 0; }
+.workshop-footer { margin: 3rem 0; padding: 2rem 0; color: var(--text-muted); }
