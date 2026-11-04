@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s="urn:aptech:session3">
+    <soap:Body>
+        <s:calculateCourseFees>
+            <courseName>ADSE</courseName>
+            <numberOfSemesters>2</numberOfSemesters>
+        </s:calculateCourseFees>
+    </soap:Body>
+</soap:Envelope>

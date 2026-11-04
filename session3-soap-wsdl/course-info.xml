@@ -1,0 +1,3 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s="urn:aptech:session3">
+    <soap:Body><s:getCourseInfo><courseName>CPISM</courseName></s:getCourseInfo></soap:Body>
+</soap:Envelope>

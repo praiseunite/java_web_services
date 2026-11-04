@@ -1,0 +1,3 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s="urn:aptech:session3">
+    <soap:Body><s:sayHello><name>Amina</name></s:sayHello></soap:Body>
+</soap:Envelope>

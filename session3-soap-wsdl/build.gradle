@@ -1,0 +1,40 @@
+/*
+ * ====================================================================
+ * Session 3: First SOAP Web Service - Gradle Configuration
+ * ====================================================================
+ * 
+ * Why do we need this file?
+ * In older Java 8, JAX-WS was included inside the JDK.
+ * JAX-WS was removed from the JDK in Java 11. Modern JDKs need external libraries.
+ * Gradle automatically downloads:
+ * 1. jakarta.xml.ws-api (The official Jakarta SOAP interfaces)
+ * 2. jaxws-rt (The Metro runtime engine that publishes Endpoint.publish)
+ */
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Jakarta XML Web Services API
+    implementation 'jakarta.xml.ws:jakarta.xml.ws-api:4.0.2'
+    implementation 'jakarta.jws:jakarta.jws-api:3.0.0'
+
+    // Metro JAX-WS Runtime (Provides built-in HTTP server publisher)
+    implementation 'com.sun.xml.ws:jaxws-rt:4.0.3'
+}
+
+application {
+    // Points to the server publisher class
+    mainClass = 'com.aptech.session3.SoapServicePublisher'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = "UTF-8"
+}
