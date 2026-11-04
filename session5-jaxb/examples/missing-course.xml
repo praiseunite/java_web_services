@@ -1,0 +1,5 @@
+<student id="101">
+    <full_name>Amina</full_name>
+    <email>learner@example.com</email>
+    <gpa>3.5</gpa>
+</student>

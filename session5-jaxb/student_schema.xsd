@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- No targetNamespace: this lab's root and children are unqualified. -->
+    <xs:simpleType name="NameText"><xs:restriction base="xs:string"><xs:minLength value="1"/><xs:maxLength value="60"/></xs:restriction></xs:simpleType>
+    <xs:simpleType name="EmailText"><xs:restriction base="xs:string"><xs:minLength value="1"/><xs:maxLength value="80"/></xs:restriction></xs:simpleType>
+    <xs:simpleType name="CourseCode"><xs:restriction base="xs:string"><xs:enumeration value="ADSE"/><xs:enumeration value="DISM"/></xs:restriction></xs:simpleType>
+    <xs:simpleType name="GpaValue"><xs:restriction base="xs:double"><xs:minInclusive value="0"/><xs:maxInclusive value="4"/></xs:restriction></xs:simpleType>
+    <xs:simpleType name="StudentId"><xs:restriction base="xs:int"><xs:minInclusive value="1"/></xs:restriction></xs:simpleType>
+    <xs:element name="student">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="full_name" type="NameText"/>
+                <xs:element name="email" type="EmailText"/>
+                <xs:element name="course" type="CourseCode"/>
+                <xs:element name="gpa" type="GpaValue"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="StudentId" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

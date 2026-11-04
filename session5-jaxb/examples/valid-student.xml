@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student id="101">
+    <full_name>Amina &amp; Tunde</full_name>
+    <email>learner@example.com</email>
+    <course>ADSE</course>
+    <gpa>3.5</gpa>
+</student>

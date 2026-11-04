@@ -1,0 +1,29 @@
+/* Session 5 shares the reading, practice and learning-log components. */
+.session-five { font-size: 1rem; overflow-wrap: anywhere; }
+.session-five, .session-five .sub-block { scroll-margin-top: 130px; }
+.session-five a { color: #7dd3fc; text-underline-offset: .18em; }
+.session-five .sub-block > p { margin: .9rem 0; }
+.session-five h4 { margin: 1.6rem 0 .6rem; font-family: var(--font-heading); font-size: 1.2rem; }
+.session-five .practice-card h4 { margin-top: .6rem; }
+.session-five .quiz-feedback:empty { display: none; }
+.session-five .quiz-feedback { margin: 1rem 0; }
+.session-five .quiz-container { margin: 1.5rem 0; }
+.session-five .trace-panel button:disabled { opacity: .65; cursor: default; }
+.session-five .lesson-code code { white-space: pre; }
+body.theme-light .session-five a { color: #0369a1; }
+body.theme-light .session-five .styled-table th,
+body.theme-light .session-five .sub-title { color: #1d4ed8; }
+@media (max-width: 600px) {
+    .session-five .styled-table { min-width: 530px; }
+    .session-five .sub-title { font-size: 1.35rem; }
+    .session-five .lesson-actions button { width: 100%; }
+}
+@media print {
+    .session-five, .session-five p, .session-five li, .session-five td,
+    .session-five code, .session-five dt, .session-five dd, .session-five a { color: black; }
+    .session-five .styled-table { min-width: 0; }
+    .session-five .styled-table th { color: black; }
+    .session-five .lesson-code code { white-space: pre-wrap; }
+    .session-five details::details-content { content-visibility: visible; }
+    .session-five details > :not(summary) { display: block; }
+}
