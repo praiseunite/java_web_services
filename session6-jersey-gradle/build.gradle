@@ -1,0 +1,44 @@
+// Gradle reads this Groovy build script. Java source belongs in src/main/java.
+plugins {
+    id 'java'         // compileJava, classes and jar tasks
+    id 'application'  // run and installDist tasks
+}
+
+group = 'com.aptech'
+version = '1.0'
+
+repositories {
+    mavenCentral() // Repository for dependencies; this does not run Maven.
+}
+
+dependencies {
+    implementation 'org.glassfish.jersey.containers:jersey-container-jdk-http:3.1.5'
+    implementation 'org.glassfish.jersey.inject:jersey-hk2:3.1.5'
+    implementation 'org.glassfish.jersey.media:jersey-media-json-jackson:3.1.5'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainClass = 'com.aptech.session6.Main'
+    applicationDefaultJvmArgs = ['--add-modules=jdk.httpserver']
+}
+
+// A small task you can change before working on HTTP requests.
+tasks.register('lessonInfo') {
+    group = 'learning'
+    description = 'Print the purpose of this teaching project.'
+    doLast {
+        println 'Session 6: Jersey handles requests; Gradle builds and runs Java.'
+    }
+}
+
+tasks.register('javaBridge', JavaExec) {
+    group = 'learning'
+    description = 'Run the plain Java warm-up without starting a server.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.aptech.session6.LessonJavaDemo'
+}

@@ -1,0 +1,33 @@
+/* Session 6 shares the reading, practice and learning-log components. */
+.session-six { font-size: 1rem; overflow-wrap: anywhere; }
+.session-six, .session-six .sub-block { scroll-margin-top: 130px; }
+.session-six a { color: #7dd3fc; text-underline-offset: .18em; }
+.session-six .sub-block > p { margin: .9rem 0; }
+.session-six h4 { margin: 1.6rem 0 .6rem; font-family: var(--font-heading); font-size: 1.2rem; }
+.session-six .practice-card h4 { margin-top: .6rem; }
+.session-six .quiz-feedback:empty { display: none; }
+.session-six .quiz-feedback { margin: 1rem 0; }
+.session-six .quiz-container { margin: 1.5rem 0; }
+.session-six .trace-panel button:disabled { opacity: .65; cursor: default; }
+.session-six .lesson-code code { white-space: pre; }
+body.theme-light .session-six a { color: #0369a1; }
+body.theme-light .session-six .styled-table th,
+body.theme-light .session-six .sub-title { color: #1d4ed8; }
+@media (max-width: 600px) {
+    .session-six .styled-table { min-width: 530px; }
+    .session-six .sub-title { font-size: 1.35rem; }
+    .session-six .lesson-actions button { width: 100%; }
+}
+@media print {
+    .session-six, .session-six p, .session-six li, .session-six td,
+    .session-six code, .session-six dt, .session-six dd, .session-six a { color: black; }
+    .session-six .styled-table { min-width: 0; }
+    .session-six .styled-table th { color: black; }
+    .session-six .lesson-code code { white-space: pre-wrap; }
+    .session-six details::details-content { content-visibility: visible; }
+    .session-six details > :not(summary) { display: block; }
+}
+
+#s6ChecklistSummary ul { list-style: none; padding: 0; }
+#s6ChecklistSummary li { display: flex; gap: .6rem; margin: .7rem 0; }
+#s6Progress { font-weight: 700; }
