@@ -1,0 +1,86 @@
+/* Session 1 reading, practice and recall tools. */
+.session-one { font-size: 1rem; }
+.session-one .sub-block > p, #prerequisites > p { margin: .9rem 0; }
+.session-one h4 { margin: 1.6rem 0 .6rem; font-family: var(--font-heading); font-size: 1.2rem; }
+.lesson-list { padding-left: 1.5rem; margin: 1rem 0; color: var(--text-secondary); }
+.lesson-list li { margin: .65rem 0; padding-left: .25rem; }
+.lesson-callout, .practice-card, .trace-panel {
+    margin: 1.4rem 0; padding: 1.35rem; border: 1px solid var(--border-accent);
+    border-left: 4px solid var(--accent-blue); border-radius: var(--radius-md); background: var(--bg-card);
+}
+.lesson-callout p, .practice-card p { margin: .6rem 0; }
+.practice-card { border-left-color: var(--accent-emerald); }
+.practice-card.independent { border-left-color: var(--accent-amber); }
+.practice-label { color: var(--accent-emerald); font-size: .76rem; letter-spacing: .08em; font-weight: 700; }
+.independent .practice-label { color: var(--accent-amber); }
+.practice-card h4 { margin-top: .6rem; }
+.lesson-code { background: var(--bg-terminal); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.2rem; margin: 1rem 0; color: #e2e8f0; }
+.lesson-code code { font-size: .88rem; line-height: 1.85; }
+.lesson-details { margin: 1rem 0; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem 1.2rem; background: var(--bg-secondary); }
+.lesson-details summary { cursor: pointer; color: var(--text-primary); font-weight: 600; }
+.lesson-details p { margin-top: 1rem; }
+.lesson-details[open] summary { color: var(--accent-cyan); }
+.s1-word-help h4 { margin-top: 0; font-size: 1.1rem; }
+.session-one .sub-block a, #s1-glossary a, #prerequisites .s1-word-help a, #independent-readiness a { color: #7dd3fc; text-decoration: underline; text-underline-offset: .18em; }
+.s1-term-list { margin: 1rem 0 0; }
+.s1-term-entry { padding: 1.1rem 0; border-top: 1px solid var(--border-color); overflow-wrap: anywhere; }
+.s1-term-entry dt { color: var(--text-primary); font-weight: 700; line-height: 1.6; }
+.s1-term-entry dd { margin: .45rem 0 0; color: var(--text-secondary); }
+.s1-term-entry dd p { margin: .4rem 0; }
+.s1-term-example { padding-left: .8rem; border-left: 2px solid var(--accent-blue); }
+body.theme-light .session-one .sub-block a, body.theme-light #s1-glossary a, body.theme-light #prerequisites .s1-word-help a, body.theme-light #independent-readiness a { color: #075985; }
+.lesson-anchor, .session-one .sub-block, #independent-readiness { scroll-margin-top: 130px; }
+.lesson-start { display: inline-block; margin-top: 1.6rem; text-decoration: none; }
+.lesson-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin: 1rem 0; }
+.trace-panel label, .trace-panel select { display: block; }
+.trace-panel select { margin: .75rem 0; padding: .8rem; max-width: 100%; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-secondary); color: var(--text-primary); font: inherit; }
+.trace-steps { padding-left: 1.6rem; min-height: 4rem; }
+.trace-steps li { margin: .8rem 0; padding-left: .25rem; }
+.trace-steps li:last-child { color: var(--text-primary); font-weight: 600; }
+.mastery-item { display: flex; gap: .85rem; align-items: flex-start; padding: 1rem; margin: .8rem 0; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-secondary); cursor: pointer; color: var(--text-secondary); }
+.mastery-item input { width: 1.15rem; height: 1.15rem; flex-shrink: 0; margin-top: .25rem; accent-color: var(--accent-emerald); }
+.mastery-progress { font-weight: 700; color: var(--accent-cyan); }
+#s1ChecklistSummary ul { list-style: none; padding: 0; margin: 1rem 0; }
+#s1ChecklistSummary li { margin: .55rem 0; display: flex; gap: .6rem; align-items: flex-start; }
+#s1ChecklistSummary a { color: var(--text-secondary); }
+.learning-notes { display: block; width: 100%; margin: .75rem 0; padding: 1rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); font: inherit; line-height: 1.7; resize: vertical; }
+.session-one .quiz-feedback:empty { display: none; }
+.session-one .quiz-feedback { margin: 1rem 0; }
+.quiz-retry { margin-top: .75rem; }
+.session-one .quiz-container { margin: 1.5rem 0; }
+.quiz-opt:disabled { cursor: default; opacity: 1; }
+.quiz-opt.correct { border-color: var(--accent-emerald); }
+.quiz-opt.wrong { border-color: var(--accent-rose); }
+.btn-copy.copy-failed { color: var(--accent-amber); }
+body.theme-light .session-one .styled-table th { color: #1d4ed8; }
+body.theme-light .practice-label { color: #047857; }
+body.theme-light .independent .practice-label { color: #92400e; }
+body.theme-light .mastery-progress { color: #0e7490; }
+body.theme-light .lesson-details[open] summary { color: #0e7490; }
+button:focus-visible, a:focus-visible, select:focus-visible, textarea:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--accent-cyan); outline-offset: 4px; }
+@media (max-width: 600px) {
+    .lesson-callout, .practice-card, .trace-panel, .lesson-details { padding: 1rem; }
+    .lesson-code { padding: .9rem; }
+    .session-one .styled-table { min-width: 530px; }
+    .session-one .sub-title { font-size: 1.35rem; }
+    .session-one .lesson-actions button { width: 100%; }
+    .session-one { overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+@media print {
+    .top-header, .sidebar, .sidebar-backdrop, .btn-copy, .lesson-start, .lesson-actions, .quiz-retry { display: none !important; }
+    .app-layout { display: block; }
+    .content-area { margin: 0; padding: 0; width: 100%; max-width: none; }
+    body { background: white; color: black; }
+    .session-one, .session-one p, .session-one li, .session-one td, .session-one code { color: black; }
+    .lesson-code { white-space: pre-wrap; background: #f4f4f4; }
+    .lesson-code code { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .table-responsive { overflow: visible; }
+    .session-one .styled-table { min-width: 0; }
+    .session-one .styled-table th { color: black; }
+    .lesson-callout, .practice-card { break-inside: avoid; }
+    #s1-glossary, #s1-glossary p, #s1-glossary dt, #s1-glossary dd, #s1-glossary a { color: black; }
+    #s1-glossary .s1-term-entry { break-inside: avoid; }
+    #s1-glossary details::details-content { content-visibility: visible; }
+    #s1-glossary details > :not(summary) { display: block; }
+}

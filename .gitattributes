@@ -1,0 +1,4 @@
+# Keep Unix Gradle launchers runnable after cloning on Linux or macOS.
+**/gradlew text eol=lf
+*.jar binary
+*.zip binary

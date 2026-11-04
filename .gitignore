@@ -1,0 +1,29 @@
+.build-cache/
+.session2-review/
+session2-jaxrs/target/
+
+session3-soap-wsdl/target/
+session3-soap-wsdl/generated-client/target/
+session3-soap-wsdl/build/
+session3-soap-wsdl/.gradle/
+session6-jersey-gradle/build/
+session6-jersey-gradle/.gradle/
+session7-jersey-crud/build/
+session7-jersey-crud/.gradle/
+session8-practice/build/
+session8-practice/.gradle/
+assignment-workshops/**/*.class
+assignment-workshops/**/target/
+assignment-workshops/**/data/
+
+# Generated Java/Gradle output and local runtime databases for every session.
+**/target/
+**/build/
+**/.gradle/
+**/data/
+*.class
+*.log
+
+# Screenshots captured while checking the learning portal.
+website/desktop_*.png
+website/mobile_*.png
