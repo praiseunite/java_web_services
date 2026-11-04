@@ -1,0 +1,38 @@
+// Same build tools and library versions as Session 6.
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.aptech'
+version = '1.0'
+
+repositories { mavenCentral() }
+
+dependencies {
+    implementation 'org.glassfish.jersey.containers:jersey-container-jdk-http:3.1.5'
+    implementation 'org.glassfish.jersey.inject:jersey-hk2:3.1.5'
+    implementation 'org.glassfish.jersey.media:jersey-media-json-jackson:3.1.5'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainClass = 'com.aptech.session7.Main'
+    applicationDefaultJvmArgs = ['--add-modules=jdk.httpserver']
+}
+
+tasks.register('lessonInfo') {
+    group = 'learning'
+    doLast { println 'Session 7: read, create, replace and delete products.' }
+}
+
+tasks.register('javaBridge', JavaExec) {
+    group = 'learning'
+    description = 'Practise catalogue changes in plain Java before HTTP.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.aptech.session7.LessonJavaDemo'
+}

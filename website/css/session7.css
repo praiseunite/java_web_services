@@ -1,0 +1,33 @@
+/* Session 7 shares the reading, practice and learning-log components. */
+.session-seven { font-size: 1rem; overflow-wrap: anywhere; }
+.session-seven, .session-seven .sub-block { scroll-margin-top: 130px; }
+.session-seven a { color: #7dd3fc; text-underline-offset: .18em; }
+.session-seven .sub-block > p { margin: .9rem 0; }
+.session-seven h4 { margin: 1.6rem 0 .6rem; font-family: var(--font-heading); font-size: 1.2rem; }
+.session-seven .practice-card h4 { margin-top: .6rem; }
+.session-seven .quiz-feedback:empty { display: none; }
+.session-seven .quiz-feedback { margin: 1rem 0; }
+.session-seven .quiz-container { margin: 1.5rem 0; }
+.session-seven .trace-panel button:disabled { opacity: .65; cursor: default; }
+.session-seven .lesson-code code { white-space: pre; }
+body.theme-light .session-seven a { color: #0369a1; }
+body.theme-light .session-seven .styled-table th,
+body.theme-light .session-seven .sub-title { color: #1d4ed8; }
+@media (max-width: 600px) {
+    .session-seven .styled-table { min-width: 530px; }
+    .session-seven .sub-title { font-size: 1.35rem; }
+    .session-seven .lesson-actions button { width: 100%; }
+}
+@media print {
+    .session-seven, .session-seven p, .session-seven li, .session-seven td,
+    .session-seven code, .session-seven dt, .session-seven dd, .session-seven a { color: black; }
+    .session-seven .styled-table { min-width: 0; }
+    .session-seven .styled-table th { color: black; }
+    .session-seven .lesson-code code { white-space: pre-wrap; }
+    .session-seven details::details-content { content-visibility: visible; }
+    .session-seven details > :not(summary) { display: block; }
+}
+
+#s7ChecklistSummary ul { list-style: none; padding: 0; }
+#s7ChecklistSummary li { display: flex; gap: .6rem; margin: .7rem 0; }
+#s7Progress { font-weight: 700; }

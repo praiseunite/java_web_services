@@ -1,0 +1,60 @@
+/*
+ * ====================================================================
+ * Gradle Build Configuration - Jersey REST Web Services Mini-Project
+ * ====================================================================
+ * 
+ * For Beginners:
+ * This file is like a "Recipe" or "Shopping List" for our project.
+ * Instead of manually downloading .jar files from the internet,
+ * Gradle reads this file, downloads all necessary libraries automatically,
+ * compiles our Java code, and runs our application server!
+ */
+
+plugins {
+    // Tells Gradle this is a Java project
+    id 'java'
+    
+    // Allows us to run the project using: gradle run
+    id 'application'
+}
+
+group = 'com.aptech'
+version = '1.0-SNAPSHOT'
+
+// Use standard Java toolchain
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// 1. Where should Gradle search to find and download our libraries?
+// MavenCentral is the world's largest free open-source Java repository.
+repositories {
+    mavenCentral()
+}
+
+// 2. The exact libraries (Dependencies) our project needs:
+dependencies {
+    // Jersey Container for Grizzly HTTP Server (Runs a lightweight embedded server)
+    implementation 'org.glassfish.jersey.containers:jersey-container-grizzly2-http:3.1.5'
+
+    // Jersey Dependency Injection engine (HK2)
+    implementation 'org.glassfish.jersey.inject:jersey-hk2:3.1.5'
+
+    // Jersey Jackson JSON integration (Automatically converts Java Objects <-> JSON)
+    implementation 'org.glassfish.jersey.media:jersey-media-json-jackson:3.1.5'
+
+    // Jakarta XML Binding (JAXB) runtime for XML support
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.2'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:4.0.5'
+}
+
+// 3. Define the main entry point class to execute with 'gradle run'
+application {
+    mainClass = 'com.aptech.webservice.Main'
+}
+
+// Optional: Configure test task if needed
+test {
+    useJUnitPlatform()
+}
