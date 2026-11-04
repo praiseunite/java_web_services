@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SESSION 2: Sample XML Document for Aptech Students
+  
+  Concepts demonstrated:
+  1. XML Declaration: <?xml version="1.0" encoding="UTF-8"?>
+  2. Root Element: <students>
+  3. Child Elements: <student>
+  4. XML Attribute: id="101" and course="ADSE"
+  5. XML Namespaces: xmlns:apt="http://www.aptech.com/schema"
+-->
+<students xmlns:apt="http://www.aptech.com/schema">
+    <student id="101" course="ADSE">
+        <name>Amina Bello</name>
+        <email>amina.bello@aptech.edu</email>
+        <apt:grade>Distinction</apt:grade>
+        <gpa>3.95</gpa>
+    </student>
+    <student id="102" course="CPISM">
+        <name>Chidi Okafor</name>
+        <email>chidi.okafor@aptech.edu</email>
+        <apt:grade>Merit</apt:grade>
+        <gpa>3.60</gpa>
+    </student>
+    <student id="103" course="DISM">
+        <name>Zainab Mohammed</name>
+        <email>zainab.m@aptech.edu</email>
+        <apt:grade>Distinction</apt:grade>
+        <gpa>3.88</gpa>
+    </student>
+</students>

@@ -1,0 +1,29 @@
+/* Session 2 uses the shared lesson cards from session1.css. */
+.session-two { font-size: 1rem; }
+.session-two, #xmlSupplement { scroll-margin-top: 130px; }
+.session-two a, #runGuide a { color: #7dd3fc; text-underline-offset: .18em; }
+body.theme-light .session-two a, body.theme-light #runGuide a { color: #0369a1; }
+.session-two .sub-block > p { margin: .9rem 0; }
+.session-two h4 { margin: 1.6rem 0 .6rem; font-family: var(--font-heading); font-size: 1.2rem; }
+.session-two .sub-block, #s2-collections-lab, #s2-assignment-startup { scroll-margin-top: 130px; }
+.session-two .practice-card h4 { margin-top: .6rem; }
+.session-two .quiz-feedback:empty { display: none; }
+.session-two .quiz-feedback { margin: 1rem 0; }
+.session-two .quiz-container { margin: 1.5rem 0; }
+.checklist-summary ul { list-style: none; padding: 0; margin: 1rem 0; }
+.checklist-summary li { margin: .55rem 0; display: flex; gap: .6rem; align-items: flex-start; }
+.checklist-summary a { color: var(--text-secondary); }
+body.theme-light .session-two .styled-table th { color: #1d4ed8; }
+body.theme-light .session-two .sub-title { color: #1d4ed8; }
+.session-two .trace-panel button:disabled { opacity: .65; cursor: default; }
+@media (max-width: 600px) {
+    .session-two .styled-table { min-width: 530px; }
+    .session-two .sub-title { font-size: 1.35rem; }
+    .session-two .lesson-actions button { width: 100%; }
+    .session-two { overflow-wrap: anywhere; }
+}
+@media print {
+    .session-two, .session-two p, .session-two li, .session-two td, .session-two code { color: black; }
+    .session-two .styled-table { min-width: 0; }
+    .session-two .styled-table th { color: black; }
+}
